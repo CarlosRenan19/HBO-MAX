@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    background: linear-gradient(to right, #213, #214, #307, #309, #316, #315);
+    position: relative;
+    height: 100vh;
+}
+
+header {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 450px;
+}
+
+.tittle-form {
+    color: white;
+    font-size: 27px;
+    margin-bottom: 3rem;
+}
+
+.email-div {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#email {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 5px 0;
+}
+
+.label-email {
+    color: #ccc;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    cursor: text;
+    transition: all 0.3s ease-in-out;
+}
+
+.senha-div {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#senha {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 5px 0;
+}
+
+#senha::-ms-reveal {
+    display: none;
+}
+
+.label-senha {
+    color: #ccc;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    cursor: text;
+    transition: all 0.3s ease-in-out;
+}
+
+#email:focus~.label-email {
+    top: -15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+#email:focus {
+    border-bottom: 2px solid #7b2abf;
+}
+
+#senha:focus {
+    border-bottom: 2px solid #7b2abf;
+}
+
+#senha:focus~.label-senha {
+    top: -15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.label-email.effect {
+    top: -15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.label-senha.effect {
+    top: -15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.eyeIcon::before {
+    content: '\e8f4';
+    font-family: 'material symbols outlined';
+    color: #cccccc99;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.eyeIcon.hidden::before {
+    content: '\e8f5';
+}
+
+.eyeIcon.active::before {
+    color: white;
+}
+
+.enter-btn {
+    width: 70%;
+    height: 45px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #83c;
+    color: white;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.326);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+}
+
+.enter-btn:hover {
+    background-color: rgb(158, 54, 244);
+}
+
+.prov-btn {
+    width: 70%;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    user-select: none;
+}
+
+.prov-btn:hover {
+    border: 2px solid #7b2abf;
+}
+
+.create-account {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.create-account a {
+    text-decoration: none;
+    color: #bac7ff;
+}
+
+.forget-password a {
+    text-decoration: none;
+    color: #bac7ff;
+}
+
+footer {
+    background-color: rgba(3, 3, 40, .8);
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 250px);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9e86ff;
+}
+
+.linguage-btn {
+    background-color: transparent;
+    border: none;
+    color: #9e86ff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 1130px) {
+    .container {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 570px) {
+
+    body {
+        min-height: 110vh;
+    }
+}
+
+@media (max-width: 445px) {
+
+    .enter-btn,
+    .prov-btn {
+        width: 100%;
+    }
+}
