@@ -7,8 +7,7 @@
 
 body {
     background: linear-gradient(to right, #213, #214, #307, #309, #316, #315);
-    position: relative;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -214,9 +213,8 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: sticky;
+    top: 100%;
 }
 
 footer a {
@@ -235,20 +233,7 @@ footer a {
     gap: 10px;
 }
 
-@media (max-width: 1130px) {
-    .container {
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 570px) {
-
-    body {
-        min-height: 118vh;
-    }
-}
-
-@media (max-width: 445px) {
+@media (max-width: 480px) {
 
     .enter-btn,
     .prov-btn {
